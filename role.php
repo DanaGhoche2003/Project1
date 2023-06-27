@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['logged_in']))
+{
+    header('location:login.php');
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +71,9 @@
                         <div class="card-body">
                             <h2 class="card-title text-light">Workout + Cardio</h2>
                             <p class="card-text text-dark"><b> 2$</b></p>
-                            <div class="btn btn-danger fs-4">Day</div>
+                            <form action="./planaction.php" method="post" style="width:100%">
+                            <button type="submit" name="first" class="btn btn-danger fs-4">Day</button>
+</form>
                         </div>
 
                     </div>
@@ -71,7 +84,9 @@
                         <div class="card-body">
                             <h2 class="card-title text-light">Workout + Cardio</h2>
                             <p class="card-text text-dark"><b> 12$</b></p>
-                            <div class="btn btn-danger fs-4">Week</div>
+                            <form action="./planaction.php" method="post" style="width:100%">
+                            <button type="submit" name="second" class="btn btn-danger fs-4">Week</button>
+</form>
                         </div>
 
                     </div>
@@ -83,7 +98,9 @@
                         <div class="card-body">
                             <h2 class="card-title text-light">W + C + Diet Plan</h2>  
                             <p class="card-text text-dark"><b> 50$</b></p>
-                            <div class="btn btn-danger fs-4">Month</div>
+                            <form action="./planaction.php" method="post" style="width:100%">
+                            <button type="submit" name="third" class="btn btn-danger fs-4">Month</button>
+</form>
                         </div>
 
                     </div>
